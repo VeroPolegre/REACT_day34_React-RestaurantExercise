@@ -1,0 +1,10 @@
+.page-header {
+  background-color: #ffecd8;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+  color: #d33f2b;
+  margin-bottom: 10px;
+}

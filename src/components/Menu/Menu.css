@@ -1,0 +1,24 @@
+.DishCard {
+  background-color: #ffecd8;
+  border: 1px solid #e07a5f;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dishName {
+  font-size: 1.2em;
+  color: #d33f2b;
+}
+
+.dishDescription {
+  margin-top: 8px;
+  color: #6d4c41;
+}
+
+.dishPrice {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #e07a5f;
+}
