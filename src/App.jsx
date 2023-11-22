@@ -1,8 +1,10 @@
 import React from "react";
-import Header from "./components/Header/Header";
-import Menu from "./components/Menu/Menu";
-import Home from "./components/Home/Home";
-import Contact from "./components/Contact/Contact";
+import "./App.css";
+import Header from "./pages/Header/Header";
+import Menu from "./pages/Menu/Menu";
+import Home from "./pages/Home/Home";
+import Contact from "./pages/Contact/Contact";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 const dishes = [
   {
@@ -27,14 +29,24 @@ const dishes = [
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Home />
-      {dishes.map(({ name, description, price }, index) => (
-        <Menu key={index} name={name} description={description} price={price} />
-      ))}
-      <Contact />
-    </div>
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          {dishes.map(({ name, description, price }, index) => (
+            <Menu
+              key={index}
+              name={name}
+              description={description}
+              price={price}
+            />
+          ))}
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
