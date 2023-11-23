@@ -1,3 +1,18 @@
 .Contact {
   text-align: center;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-5);
+  margin: 0.5em;
+  padding: 1em;
+  text-align: start;
+  gap: 0.1em;
+  transform: translateY(-1em);
+}
+
+label {
+  color: var(--clr-1);
+}

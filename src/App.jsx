@@ -32,19 +32,20 @@ function App() {
     <>
       <Router>
         <Header />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
-          {dishes.map(({ name, description, price }, index) => (
-            <Menu
-              key={index}
-              name={name}
-              description={description}
-              price={price}
-            />
-          ))}
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        {dishes.map(({ name, description, price }, index) => (
+          <Menu
+            key={index}
+            name={name}
+            description={description}
+            price={price}
+          />
+        ))}
       </Router>
     </>
   );
